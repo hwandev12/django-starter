@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 .container {
@@ -16,6 +17,7 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 .navbar h1 {
     font-size: 2rem;

@@ -11,3 +11,6 @@ def andijon(request):
 
 def namangan(request):
     return render(request, 'namangan.html')
+
+def buxoro(request):
+    return render(request, 'buxoro.html')
