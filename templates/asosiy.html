@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <nav class="navbar container">
+        <h1>Logo</h1>
+        <ul class="lists">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Andijon</a></li>
+            <li><a href="#">Namangan</a></li>
+            <li><a href="#">Buxoro</a></li>
+            <li><a href="#">Toshkent</a></li>
+        </ul>
+    </nav>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

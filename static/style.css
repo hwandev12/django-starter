@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+.navbar h1 {
+    font-size: 2rem;
+    font-family: sans-serif;
+    text-transform: lowercase;
+}
+.lists {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.lists li {
+    margin-right: 30px;
+}
+.lists a {
+    display: inline-block;
+    color: #444;
+    text-decoration: none;
+}
