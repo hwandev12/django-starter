@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import Cards, Andijon
 
-# Register your models here.
+admin.site.register(Cards)
+admin.site.register(Andijon)

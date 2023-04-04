@@ -5,8 +5,16 @@
 {% block content %}
 
     <div class="container">
-        <h1>Homepage</h1>
-        <img src="{% static 'coding.jpeg' %}" alt="" width="700">
+        <div class="wrapper">
+            {% for x in cards %}
+            <div class="box">
+                <h1>{{ x.heading }}</h1>
+                <p>{{ x.text }}</p>
+                <hr>
+                <a href="#">TWITTER</a>
+            </div>
+            {% endfor %}
+        </div>
     </div>
 
 {% endblock %}

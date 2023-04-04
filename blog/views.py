@@ -1,12 +1,20 @@
 from django.shortcuts import render
-
+from .models import Cards, Andijon
 
 def home(request):
-    return render(request, 'index.html')
+    cards = Cards.objects.all()
+    context = {
+        "cards": cards
+    }
+    return render(request, 'index.html', context)
 
 
 def andijon(request):
-    return render(request, 'andijon.html')
+    andijon = Andijon.objects.all()
+    context = {
+        "andijon": andijon
+    }
+    return render(request, 'andijon.html', context)
 
 
 def namangan(request):

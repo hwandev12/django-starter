@@ -38,3 +38,30 @@
     color: #444;
     text-decoration: none;
 }
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box {
+    width: 320px;
+    height: 400px;
+    background-color: #999;
+    border-radius: 10px;
+    padding: 20px 30px;
+    margin-right: 30px;
+}
+.box hr {
+    margin-top: 180px;
+}
+.box h1 {
+    margin-bottom: 40px;
+    font-size: 25px;
+}
+.box a {
+    display: inline-block;
+    color: #444;
+    text-decoration: none;
+    margin-top: 20px;
+}
