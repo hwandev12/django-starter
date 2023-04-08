@@ -15,8 +15,20 @@ class Andijon(models.Model):
 
     def __str__(self):
         return self.ovqat
-    
+
 class Namangan(models.Model):
+    
+    viloyat = models.CharField(max_length=60)
+    viloyat_haqida = models.TextField(max_length=700)
+    odam_soni = models.IntegerField()
+    ortacha_yosh = models.IntegerField()
+    tumanlar_soni = models.IntegerField()
+    image = models.ImageField(null=True)
+
+    def __str__(self):
+        return self.viloyat
+
+class Buxoro(models.Model):
     
     viloyat = models.CharField(max_length=60)
     viloyat_haqida = models.TextField(max_length=700)
@@ -26,4 +38,3 @@ class Namangan(models.Model):
     
     def __str__(self):
         return self.viloyat
-   

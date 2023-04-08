@@ -1,8 +1,16 @@
 {% extends 'asosiy.html' %}
+{% block title %}Buxoro{% endblock %}
 
 {% block content %}
 <div class="container">
-    <h1>Welcome to Bukhara</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis reiciendis dolorum aperiam consequatur, laudantium nostrum distinctio voluptas at odit eaque sint consectetur placeat aspernatur voluptatum enim ducimus minima. Harum modi libero molestias cupiditate exercitationem dolor voluptates cum officiis repellendus velit.</p>
+    {% for x in buxoro_content %}
+    <div class="buxoro">
+        <h1>{{ x.viloyat }}</h1>
+        <p>{{ x.viloyat_haqida }}</p>
+        <h3>{{ x.odam_soni }}ta odam yashaydi </h3>
+        <h3>{{ x.ortacha_yosh }}yosh o'rtacha hisoblanadi </h3>
+        <h3>{{ x.tumanlar_soni }}ta umumiy tumanlar mavjud</h3>
+    </div>
+    {% endfor %}
 </div>
 {% endblock %}

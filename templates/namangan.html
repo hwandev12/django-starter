@@ -5,6 +5,7 @@
 <div class="container">
     {% for x in namangan %}
     <div class="namangan">
+        <img src="{{ x.image.url }}" alt="" width="500">
         <h1>{{ x.viloyat }}</h1>
         <p>{{ x.viloyat_haqida }}</p>
         <h3>{{ x.odam_soni }}ta odam yashaydi </h3>
