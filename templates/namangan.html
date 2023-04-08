@@ -3,10 +3,14 @@
 
 {% block content %}
 <div class="container">
-    <h1>Namangan</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, aperiam beatae consectetur distinctio ex fuga
-        laudantium necessitatibus nesciunt non obcaecati odio odit optio perspiciatis quia ratione sequi tempora
-        veritatis voluptas.</p>
-    <a href="/">Home</a>
+    {% for x in namangan %}
+    <div class="namangan">
+        <h1>{{ x.viloyat }}</h1>
+        <p>{{ x.viloyat_haqida }}</p>
+        <h3>{{ x.odam_soni }}ta odam yashaydi </h3>
+        <h3>{{ x.ortacha_yosh }}yosh o'rtacha hisoblanadi </h3>
+        <h3>{{ x.tumanlar_soni }}ta umumiy tumanlar mavjud</h3>
+    </div>
+    {% endfor %}
 </div>
 {% endblock %}

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Cards, Andijon
+from .models import Cards, Andijon, Namangan
 
 def home(request):
     cards = Cards.objects.all()
@@ -18,7 +18,11 @@ def andijon(request):
 
 
 def namangan(request):
-    return render(request, 'namangan.html')
+    namangan = Namangan.objects.all()
+    context = {
+        "namangan": namangan
+    }
+    return render(request, 'namangan.html', context)
 
 def buxoro(request):
     return render(request, 'buxoro.html')
