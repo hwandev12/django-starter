@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Cards, Andijon, Namangan, Buxoro
+from .models import *
 
 def home(request):
     cards = Cards.objects.all()
@@ -30,3 +30,7 @@ def buxoro(request):
         "buxoro_content": buxoro_malumot
     }
     return render(request, 'buxoro.html', context)
+
+def books(request):
+    book = Books.objects.all()
+    return render(request, 'books.html', {"book": book})

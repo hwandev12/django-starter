@@ -21,7 +21,7 @@ class Namangan(models.Model):
     class Meta:
         verbose_name = "Namangan Qo'shish"
         verbose_name_plural ="Namangan"
-    
+
     viloyat = models.CharField(max_length=60)
     viloyat_haqida = models.TextField(max_length=700)
     odam_soni = models.IntegerField()
@@ -42,3 +42,30 @@ class Buxoro(models.Model):
 
     def __str__(self):
         return self.viloyat
+    
+    
+class Author(models.Model):
+    
+    class Meta:
+        verbose_name = "Author"
+        verbose_name_plural = "Author"
+        
+    firstname = models.CharField(max_length=20)
+    lastname = models.CharField(max_length=30)
+    age = models.IntegerField(default=20)
+    
+    def __str__(self):
+        return self.firstname
+    
+class Books(models.Model):
+    
+    class Meta:
+        verbose_name = "Books"
+        verbose_name_plural = "Books"
+        
+    book_name = models.CharField(max_length=60)
+    book_date = models.DateField()
+    author = models.ForeignKey(Author, on_delete=models.CASCADE)
+    
+    def __str__(self):
+        return self.book_name

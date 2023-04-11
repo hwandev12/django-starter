@@ -1,0 +1,14 @@
+{% extends 'asosiy.html' %}
+
+
+{% block content %}
+<div class="container">
+    {% for x in book %}
+    <div class="books">
+        <h2>{{ x.book_name }}</h2>
+        <h3>{{ x.book_date }}</h3>
+        <a href="#">{{ x.author }}</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
