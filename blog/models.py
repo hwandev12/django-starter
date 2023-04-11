@@ -18,6 +18,10 @@ class Andijon(models.Model):
 
 class Namangan(models.Model):
     
+    class Meta:
+        verbose_name = "Namangan Qo'shish"
+        verbose_name_plural ="Namangan"
+    
     viloyat = models.CharField(max_length=60)
     viloyat_haqida = models.TextField(max_length=700)
     odam_soni = models.IntegerField()
@@ -35,6 +39,6 @@ class Buxoro(models.Model):
     odam_soni = models.IntegerField()
     ortacha_yosh = models.IntegerField()
     tumanlar_soni = models.IntegerField()
-    
+
     def __str__(self):
         return self.viloyat
