@@ -4,9 +4,22 @@ class Cards(models.Model):
     
     heading = models.CharField(max_length=200)
     text = models.TextField(max_length=700)
+    category = models.ForeignKey("Category", null=True, on_delete=models.SET_NULL)
     
     def __str__(self):
         return self.heading
+
+class Category(models.Model):
+    
+    class Meta:
+        verbose_name = "Category"
+        verbose_name_plural = "Category"
+        
+    name = models.CharField(max_length=100)
+    
+    def __str__(self):
+        return self.name
+
 
 class Andijon(models.Model):
     
@@ -58,7 +71,7 @@ class Author(models.Model):
         return self.firstname
     
 class Books(models.Model):
-    
+
     class Meta:
         verbose_name = "Books"
         verbose_name_plural = "Books"
@@ -66,6 +79,6 @@ class Books(models.Model):
     book_name = models.CharField(max_length=60)
     book_date = models.DateField()
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
-    
+
     def __str__(self):
         return self.book_name
