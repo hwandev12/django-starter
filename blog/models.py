@@ -5,7 +5,7 @@ class Cards(models.Model):
     heading = models.CharField(max_length=200)
     text = models.TextField(max_length=700)
     category = models.ForeignKey("Category", null=True, on_delete=models.SET_NULL)
-    
+
     def __str__(self):
         return self.heading
 

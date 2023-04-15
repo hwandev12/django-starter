@@ -5,6 +5,12 @@
 {% block content %}
 
     <div class="container">
+        <div class="category" style="text-align: center; margin: 30px 0px;">
+            {% for x in categories %}
+                <a href="/?category={{ x.name }}">{{ x.name }}</a> |
+            {% endfor %}
+            <a href="/">All</a>
+        </div>
         <div class="wrapper">
             {% for x in cards %}
             <div class="box">
@@ -14,6 +20,8 @@
                 <a href="#">TWITTER</a>
             </div>
             {% endfor %}
+
+            
         </div>
     </div>
 

@@ -2,9 +2,18 @@ from django.shortcuts import render
 from .models import *
 
 def home(request):
-    cards = Cards.objects.all()
+
+    category = request.GET.get("category")
+
+    if category == None:
+        cards = Cards.objects.all()
+    else:
+        cards = Cards.objects.filter(category__name=category)
+
+    categories = Category.objects.all()
     context = {
-        "cards": cards
+        "cards": cards,
+        "categories": categories
     }
     return render(request, 'index.html', context)
 
