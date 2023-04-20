@@ -1,14 +1,21 @@
 from django.shortcuts import render
 from .models import *
+from django.db.models import Q
 
 def home(request):
 
-    category = request.GET.get("category")
+    # category = request.GET.get("category")
 
-    if category == None:
-        cards = Cards.objects.all()
+    # if category == None:
+    #     cards = Cards.objects.all()
+    if 'q' in request.GET:
+        search = request.GET['q']
+        fulL_search = Q(Q(heading__icontains=search))
+        cards = Cards.objects.filter(fulL_search)
     else:
-        cards = Cards.objects.filter(category__name=category)
+        cards = Cards.objects.all()
+    # else:
+    #     cards = Cards.objects.filter(category__name=category)
 
     categories = Category.objects.all()
     context = {
